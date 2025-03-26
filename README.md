@@ -60,7 +60,7 @@ This project is more than a mere collection of code; it is a testament to the po
 ```bash
 project-root/
 ├── services/
-│   ├── auth-service/ (golang)
+│   ├── auth-service/ (golang + JWT + OAuth 2.0/OpenID)
 │   ├── user-service/ (golang)
 │   ├── post-service/ (golang)
 │   ├── event-service/ (golang)
@@ -68,10 +68,10 @@ project-root/
 │   ├── notification-service/ (golang)
 │   ├── explore-service/ (golang + ElasticSearch/Pinecone)
 │   ├── data-lake-service/ (golang + Cassandra)
-│   ├── gateway/ (API Gateway - Nginx/Kong)
+│   ├── gateway/ (API Gateway - Nginx/Kong + WAF + CORS + Rate Limiting)
 │   ├── common/ (Shared packages)
 │   ├── Dockerfile (Each service separately)
-├── data-pipeline/ (data pricces)
+├── data-pipeline/ (data processing)
 │   ├── stream-processing/ (Kafka Streams + Flink/Golang)
 │   ├── batch-processing/ (Spark + Python)
 │   ├── recommendation/ (golang + TensorFlow/Pinecone)
@@ -80,7 +80,7 @@ project-root/
 │   ├── migrations/
 │   ├── init-scripts/
 │   ├── managed-db/
-│   ├── nosql-db/ (Cassandra for no structured data)
+│   ├── nosql-db/ (Cassandra for unstructured data)
 ├── infrastructure/
 │   ├── kubernetes/
 │   ├── docker-compose.yml
@@ -88,6 +88,8 @@ project-root/
 │   │   ├── prometheus/
 │   │   ├── grafana/
 │   │   ├── alertmanager/
+│   │   ├── tracing/ (Jaeger/Zipkin for distributed tracing)
+│   ├── security/ (KMS/Vault for key management)
 │   ├── failover/ (Failover management for databases and services)
 │   ├── cdn/
 │   ├── serverless/
