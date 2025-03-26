@@ -1,6 +1,6 @@
 # Philosofer
 
-[Kubernetes](https://kubernetes.io/)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-v1.20-blue?logo=kubernetes)
 
 The system's populace is tripartite: users, data procurers, and administrators, each endowed with the capacity for ingress, registration, and egress.**
 
