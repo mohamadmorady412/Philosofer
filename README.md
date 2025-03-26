@@ -1,5 +1,7 @@
 # Philosofer
 
+[Kubernetes](https://kubernetes.io/)
+
 The system's populace is tripartite: users, data procurers, and administrators, each endowed with the capacity for ingress, registration, and egress.**
 
 Users possess the faculty to inscribe "posts" – articulations of predicaments encountered by themselves or their organizations in the realm of commerce. Furthermore, they may append "approaches" – elucidations of resolutions – to the posts of fellow users or generate them autonomously. They are also empowered to confer "donations" upon the solutions of others or orchestrate "donation" campaigns for their own approaches. Users may convene "events," gatherings intended for the execution of tasks (e.g., the advancement of proposals aimed at value creation), which may also feature donation drives.
