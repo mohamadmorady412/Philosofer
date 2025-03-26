@@ -60,7 +60,22 @@ This project is more than a mere collection of code; it is a testament to the po
 ```bash
 project-root/
 ├── services/
-│   ├── auth-service/ (golang + JWT + OAuth 2.0/OpenID)
+│   ├── auth-service/ (golang + JWT + OAuth 2.0/OpenID + GitHub OAuth)
+│   │   ├── config/ (Configuration files)
+│   │   ├── db/ (PostgreSQL + Redis for token bucket)
+│   │   ├── models/ (User & Token models)
+│   │   ├── repository/ (Database access layer)
+│   │   ├── services/ (Authentication & rate limiting)
+│   │   │   ├── auth_service.go (JWT + OAuth 2.0)
+│   │   │   ├── github_oauth.go (GitHub OAuth integration)
+│   │   │   ├── rate_limiter.go (Token bucket with Redis)
+│   │   │   ├── ip_blocker.go (IP blocking & logging to ELK)
+│   │   ├── handlers/ (HTTP request handlers)
+│   │   ├── middlewares/ (Middleware for security & logging)
+│   │   ├── routes/ (Router definitions)
+│   │   ├── main.go (Entry point)
+│   │   ├── Dockerfile (Containerization)
+│   │   ├── .env (Environment variables)
 │   ├── user-service/ (golang)
 │   ├── post-service/ (golang)
 │   ├── event-service/ (golang)
@@ -71,10 +86,10 @@ project-root/
 │   ├── gateway/ (API Gateway - Nginx/Kong + WAF + CORS + Rate Limiting)
 │   ├── common/ (Shared packages)
 │   ├── Dockerfile (Each service separately)
-├── data-pipeline/ (data processing)
+├── data-pipeline/ (Data processing)
 │   ├── stream-processing/ (Kafka Streams + Flink/Golang)
 │   ├── batch-processing/ (Spark + Python)
-│   ├── recommendation/ (golang + TensorFlow/Pinecone)
+│   ├── recommendation/ (Golang + TensorFlow/Pinecone)
 │   ├── Dockerfile
 ├── database/
 │   ├── migrations/
@@ -93,6 +108,10 @@ project-root/
 │   ├── failover/ (Failover management for databases and services)
 │   ├── cdn/
 │   ├── serverless/
+│   ├── elk/ (Log aggregation with ELK stack)
+│   │   ├── docker-compose.yml (ELK deployment)
+│   │   ├── logstash.conf (Logstash pipeline configuration)
+│   │   ├── kibana_dashboard.json (Predefined Kibana dashboard)
 ├── tests/
 │   ├── integration/
 │   ├── e2e/
