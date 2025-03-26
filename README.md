@@ -1,7 +1,6 @@
 # Philosofer
 
 ```bash
-tree -L 2
 project-root/
 ├── services/
 │   ├── auth-service/ (golang)
